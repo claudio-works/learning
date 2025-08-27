@@ -8,5 +8,7 @@
 - Product cards
 - Navigation bars
 - Layout patterns
-
+  
 Learning CSS by building stuff.
+
+Added live landing page for projects
