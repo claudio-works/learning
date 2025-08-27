@@ -14,9 +14,6 @@
   </head>
   <body>
     <main>
-     
-        <!-- RUNNING STYLE CARD`` -->
-         
       <div class="card-body">
         <svg
           class="heart"
@@ -35,17 +32,10 @@
           />
         </svg>
 
-        <img
-          src="/css-learning/projects/brand-card-systems/assets/swoosh-orange.png"
-          alt="nike-logo"
-          class="swoosh"
-        />
+        <img src="assets/swoosh-orange.png" alt="nike-logo" class="swoosh" />
 
         <div class="container-img">
-          <img
-            src="/css-learning/projects/brand-card-systems/assets/vomero_plus_pink.jpeg"
-            alt="nike vomero image"
-          />
+          <img src="assets/vomero_plus_pink.jpeg" alt="nike vomero image" />
         </div>
         <div class="product-content">
           <div class="product-badge">RUNNING</div>
@@ -183,7 +173,9 @@
         // change image of the shoe with the color selected
         const selectedColor = this.dataset.color;
         const shoeImage = document.querySelector(".container-img img");
-        const basePath = "/css-learning/projects/brand-card-systems/assets/";
+
+        // CORRECTED JAVASCRIPT PATH
+        const basePath = "assets/";
         shoeImage.src = `${basePath}vomero_plus_${selectedColor}.jpeg`;
       });
     });
