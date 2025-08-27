@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins & paddings */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.product-image img {
+  width: 100%;
+  height: 250px; /* Set desired height */
+  object-fit: cover; /* Crops to fit the container */
+  object-position: center; /* Centers the crop */
+}
+
+.product-info h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.product-info p {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.001rem;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.001rem;
+  font-size: medium;
+}
+
+.card-container {
+  background-color: rgb(228, 228, 228);
+  padding: 16px;
+  border-radius: 8px;
+  width: 280px; /* Fixed width */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-badge {
+  color: red;
+  font-family: "IBM Plex Mono", sans-serif;
+  margin-bottom: 5px;
+}
+
+.add-to-cart {
+  font-family: "IBM Plex Mono", sans-serif;
+  border-radius: 2px;
+  border: 1px solid black;
+  cursor: pointer;
+   transition: all 0.3s ease-in-out;
+}
+
+.add-to-cart:hover {
+  background-color: rgb(255, 255, 255);
+  transform: translateY(-2px);
+}
+
+.add-to-cart:active {
+  background-color: rgb(255, 182, 45);
+}

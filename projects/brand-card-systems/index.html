@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brand Shopping Cards System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+     
+        <!-- RUNNING STYLE CARD`` -->
+         
+      <div class="card-body">
+        <svg
+          class="heart"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <img
+          src="/css-learning/projects/brand-card-systems/assets/swoosh-orange.png"
+          alt="nike-logo"
+          class="swoosh"
+        />
+
+        <div class="container-img">
+          <img
+            src="/css-learning/projects/brand-card-systems/assets/vomero_plus_pink.jpeg"
+            alt="nike vomero image"
+          />
+        </div>
+        <div class="product-content">
+          <div class="product-badge">RUNNING</div>
+          <h2 class="product-name">Nike Vomero Plus</h2>
+          <h3 class="product-description">Women's Road Running Shoes</h3>
+          <div class="features">
+            <span class="feature-tag">React Foam</span>
+            <span class="feature-tag">Zoom Air</span>
+          </div>
+        </div>
+
+        <div class="expandable-options">
+          <hr class="options-divider" />
+          <div class="size-section">
+            <div class="size-header">
+              <p class="option-label">Select Size:</p>
+              <a
+                href="https://www.nike.com/size-fit/womens-footwear?_gl=1*r6vyyr*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwtrXFBhBiEiwAEKen15vpOp9VOnoYvW4OD-bjxRhNEjat81WzECnTghViyWQGQNrCsvVFVhoCzHEQAvD_BwE&gclsrc=aw.ds&gbraid=0AAAAADy86kMvBHy4RKsFEeu6rys1y2FdA"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="size-guide"
+                >Size Guide</a
+              >
+            </div>
+            <div class="size-grid">
+              <button class="size-box">6</button>
+              <button class="size-box">6.5</button>
+              <button class="size-box">7</button>
+              <button class="size-box">7.5</button>
+              <button class="size-box out-of-stock">8.5</button>
+              <button class="size-box">8.5</button>
+              <button class="size-box">9</button>
+              <button class="size-box out-of-stock">9.5</button>
+            </div>
+          </div>
+          <div class="color-section">
+            <p class="option-label">Color:</p>
+            <div class="color-options">
+              <span
+                class="color-dot active"
+                data-color="orange"
+                style="background: #ffb274"
+              ></span>
+              <span
+                class="color-dot"
+                data-color="white"
+                style="background: #f2f2f2"
+              ></span>
+              <span
+                class="color-dot"
+                data-color="light-blue"
+                style="background: #7394b3"
+              ></span>
+              <span
+                class="color-dot"
+                data-color="black"
+                style="background: #28292d"
+              ></span>
+              <span
+                class="color-dot"
+                data-color="pink"
+                style="background: #ff9ebe"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="price">$130</span>
+          <button class="select-options" onclick="toggleOptions(this)">
+            Select Options
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="portfolio-disclaimer">
+        <p>⚠️ Educational Project - Not affiliated with Nike, Inc.</p>
+        <p>Created to demonstrate front-end development skills</p>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    // Heart-like functionality
+    document.querySelectorAll(".heart").forEach(function (heart) {
+      heart.addEventListener("click", function () {
+        this.classList.toggle("liked");
+      });
+    });
+
+    // Toggle expandable options
+    function toggleOptions(button) {
+      const card = button.closest(".card-body");
+      const expandable = card.querySelector(".expandable-options");
+
+      // Toggle the expanded class
+      expandable.classList.toggle("expanded");
+
+      // Change button text and style
+      if (expandable.classList.contains("expanded")) {
+        button.textContent = "Add to Bag";
+        button.className = "add-to-cart";
+      } else {
+        button.textContent = "Select Options";
+        button.className = "select-options";
+      }
+    }
+
+    // Size selector
+    document.querySelectorAll(".size-box").forEach(function (size) {
+      size.addEventListener("click", function () {
+        if (this.classList.contains("out-of-stock")) {
+          return; // stop here if OOS
+        }
+
+        this.parentElement
+          .querySelectorAll(".size-box")
+          .forEach(function (box) {
+            box.classList.remove("selected");
+          });
+        this.classList.add("selected");
+      });
+    });
+
+    // color selector
+    document.querySelectorAll(".color-dot").forEach(function (dot) {
+      dot.addEventListener("click", function () {
+        // remove active from other colors
+        this.parentElement.querySelectorAll(".color-dot").forEach(function (d) {
+          d.classList.remove("active");
+        });
+        // color clicker
+        this.classList.add("active");
+
+        // change image of the shoe with the color selected
+        const selectedColor = this.dataset.color;
+        const shoeImage = document.querySelector(".container-img img");
+        const basePath = "/css-learning/projects/brand-card-systems/assets/";
+        shoeImage.src = `${basePath}vomero_plus_${selectedColor}.jpeg`;
+      });
+    });
+  </script>
+</html>

@@ -1,0 +1,45 @@
+
+.clothing-card {
+    display: flex;
+    flex-direction: column;
+      width: 250px;
+padding: 16px;
+    background-color: orange;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.product-image {
+ position: relative;
+}
+
+.product-image img {
+  width: 100%;
+  height: var(--image-height);
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.color-option {
+  
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+}
+
+.color-black {
+background-color: black;
+}
+
+.color-gray{
+background-color: gray;
+
+}
+
+.color-blue{
+background-color: red;
+
+}

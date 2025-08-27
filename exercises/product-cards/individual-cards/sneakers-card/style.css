@@ -1,0 +1,125 @@
+/* =========================
+        CARD CONTAINER
+   ========================= */
+.card-container {
+  background-color: var(--bg-sneaker);
+  padding: var(--space-2);
+  border-radius: var(--space-1);
+  width: var(--card-width);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2-5);
+  margin: var(--space-2-5);
+  box-shadow: var(--shadow-sneaker);
+}
+
+
+/* =========================
+        PRODUCT IMAGE
+   ========================= */
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image::after {
+  content: "Quick View";
+  position: absolute;
+  bottom: var(--space-2-5);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--color-white);
+  padding: var(--space-05) var(--space-2);
+  border-radius: var(--space-2);
+  font-size: var(--text-xs);
+  opacity: 1;
+  transition: opacity var(--transition-fast);
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.001rem;
+}
+
+.product-image:hover::after {
+  opacity: 0;
+}
+
+.product-image img {
+  width: 100%;
+  height: var(--image-height);
+  object-fit: cover;
+  object-position: center;
+  transition: opacity var(--transition-fast);
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.product-image:hover .hover-image {
+  opacity: 1;
+}
+
+.product-image:hover .main-image {
+  opacity: 0;
+}
+
+/* =========================
+        TYPOGRAPHY
+   ========================= */
+.product-info h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: var(--text-xl);
+}
+
+.product-info p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.001rem;
+  margin-bottom: var(--space-5);
+}
+
+.product-badge {
+  color: var(--color-accent);
+  font-family: var(--font-body);
+  margin-bottom: var(--space-05);
+}
+
+/* =========================
+        PRODUCT FOOTER
+   ========================= */
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0.001rem;
+  font-size: var(--text-base);
+}
+
+/* =========================
+        BUTTON
+   ========================= */
+.add-to-cart {
+  font-family: var(--font-body);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.add-to-cart:hover {
+  background-color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.add-to-cart:active {
+  background-color: var(--hover-yellow);
+}

@@ -1,0 +1,238 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins & paddings */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+/* Images scale properly */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hide-only utility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Link reset preset */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+/* =========================
+   2) Tokens
+   ========================= */
+:root {
+  /* Fonts */
+  --font-main: "Playfair Display", sans-serif;
+  --font-sub: "Lato", sans-serif;
+
+  /* Main Colors */
+  --color-body: #121724;
+
+  /* Shadows */
+  --main-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  --form-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  --button-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+
+  /* Spacing scale (rem units for better accessibility) */
+  --space-1: 0.5rem; /* 8px */
+  --space-1-5: 0.75rem; /* 12px */
+  --space-2: 1rem; /* 16px */
+  --space-2-5: 1.25rem; /* 20px */
+  --space-3: 1.5rem; /* 24px */
+  --space-4: 2rem; /* 32px */
+  --space-5: 2.5rem; /* 40px */
+  --space-6: 3rem; /* 48px */
+  --space-7: 4rem; /* 64px */
+  --space-8: 5rem; /* 80px */
+
+  /* Type scale */
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 2rem;
+  --text-xxl: clamp(3rem, 6vw, 4rem); /* responsive */
+
+  /* Effects */
+  --radius-pill: 9999px;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --shadow-accent: 0 0 12px rgba(196, 87, 24, 0.6);
+}
+
+/* NAV DEBUG */
+
+nav {
+  position: absolute;
+  top: 2rem; /* Distance from top */
+  left: 2rem; /* Distance from left */
+  z-index: 10;
+}
+
+nav img {
+  border: 2px solid #ff0000;
+  max-width: 50px;
+}
+
+/* MAIN CONTAINER DEBUG */
+
+body {
+  background: var(--color-body);
+  margin: var(--space-2-5) 0 var(--space-2-5) var(--space-8);
+}
+
+main {
+  min-height: 100vh;
+}
+
+.hero-section {
+  position: relative;
+  min-height: calc(100vh - 100px);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 60%; /* Controls background width without affecting image */
+  padding: 8rem 6rem 12rem 6rem;
+  z-index: 2;
+  background-color: var(--color-body);
+}
+
+/* Position form separately */
+.access-form {
+  position: absolute;
+  bottom: 20%;
+  left: 20%;
+  z-index: 3;
+}
+
+/* Position dots pattern separately */
+.hero-pattern-dots {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  z-index: 3;
+}
+/* DECORATIVE ELEMENTS DEBUG */
+/*
+.hero-pattern-dots {
+  background: #f0e68c !important;
+  padding: 10px;
+  border: 2px solid #bdb76b;
+}
+
+.hero-pattern-dots img {
+  border: 2px solid #000;
+  max-width: 100px;
+}
+*/
+
+/* FORM DEBUG */
+/*
+.access-form {
+  background: #20b2aa !important;
+  padding: 10px;
+  border: 3px solid #008b8b;
+}
+
+.access-form input {
+  border: 2px solid #ff0000 !important;
+  background: #ffff99 !important;
+  margin: 5px;
+  padding: 5px;
+}
+
+.access-form button {
+  border: 2px solid #ff0000 !important;
+  background: #ff9999 !important;
+  margin: 5px;
+  padding: 5px;
+}
+*/
+
+/* FOOTER DEBUG */
+/*
+footer {
+  background: #ffc0cb !important;
+  padding: 10px;
+  border: 3px solid #ff1493;
+}
+
+.platform-links {
+  background: #e6e6fa !important;
+  padding: 10px;
+  border: 2px solid #9370db;
+}
+
+.platform-links a {
+  border: 1px solid #000;
+  margin: 2px;
+  display: inline-block;
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+
+.platform-links img {
+  border: 2px solid #000;
+  max-width: 60px;
+}
+*/
+
+/* TYPOGRAPHY DEBUG */
+/*
+h1 {
+  background: rgba(255, 0, 0, 0.3) !important;
+  border: 1px solid #ff0000;
+  margin: 5px 0;
+}
+
+p {
+  background: rgba(0, 255, 0, 0.3) !important;
+  border: 1px solid #00ff00;
+  margin: 5px 0;
+}
+*/
