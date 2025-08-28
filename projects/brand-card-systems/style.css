@@ -88,9 +88,6 @@ body {
   position: relative;
 }
 
-.container-img:hover img {
-  transform: scale(1.1) rotate(-5deg);
-}
 
 .container-img img {
   object-fit: cover;
@@ -99,12 +96,12 @@ body {
   height: 250px;
   border-radius: 16px 16px 0px 0px;
   margin-bottom: 10px;
-  transition: transform 0.4s ease-in-out;
 }
 
 .product-content {
   padding-left: 20px;
   margin-bottom: 30px;
+
 }
 
 .product-badge {
@@ -242,8 +239,8 @@ body {
 }
 
 .size-guide {
-  text-decoration: none !important;
-  color: inherit !important;
+  text-decoration: none;
+  color: inherit;
 }
 
 .size-guide:hover,
@@ -254,16 +251,19 @@ body {
   color: inherit !important;
 }
 .size-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-top: 12px;
   font-family: "Inter", sans-serif;
   font-size: 12px;
   color: #666;
-  margin-right: 20px;
-  margin-bottom: 8px;
-  margin-top: 12px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+    padding-right: 19px;
+
 }
+
+
 
 .size-grid {
   display: grid;
@@ -291,6 +291,14 @@ body {
   background: #ff602f;
   color: white;
   border-color: #ff602f;
+}
+
+.option-label {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #666;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .color-options {
@@ -351,3 +359,4 @@ body {
   color: #999;
   border-color: #e0e0e0;
 }
+
