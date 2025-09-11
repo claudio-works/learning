@@ -1,4 +1,6 @@
-/* Reset */
+/* =========================
+            RESET
+   ========================= */
 *,
 *::before,
 *::after {
@@ -20,16 +22,22 @@ ol {
 }
 
 /* =========================
-            TOKENS
+         1) TOKENS
    ========================= */
 :root {
+  /* Brand Colors */
+  --nike-orange: #ff602f;
+
   /* Colors */
-  --bg-sneaker: #e4e4e4;
-  --color-primary: #000;
-  --color-secondary: #666;
-  --color-accent: red;
   --color-white: #fff;
-  --hover-yellow: rgb(255, 182, 45);
+  --buttonactive-dark: #222;
+  --text-secondary: var(--gray-600);
+  --gray-100: #f5f5f5;
+  --gray-200: #e0e0e0;
+  --gray-400: #999;
+  --gray-500: #747474;
+  --gray-600: #666;
+  --offwhite-accent: #d94646;
 
   /* Shadows */
   --shadow-sneaker: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
@@ -58,8 +66,8 @@ ol {
   --text-xxl: 2rem;
 
   /* Fonts */
-  --font-heading: "Bebas Neue", sans-serif;
-  --font-body: "IBM Plex Mono", sans-serif;
+  --font-main: "Montserrat", sans-serif;
+  --font-sub: "Inter", sans-serif;
 
   /* Image */
   --image-height: 250px;
@@ -69,8 +77,27 @@ ol {
   --border-radius-sm: 2px;
 }
 
+/* =========================
+         2) BASE STYLES
+   ========================= */
+
 body {
-  background-color: rgb(165, 165, 165);
+  background-color: var(--gray-400);
+}
+
+/* =========================
+         3) COMPONENTS 
+   ========================= */
+
+/* ----- Card Component ----- */
+
+.card-collection {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: start;
+  gap: 20px;
+  justify-items: center;
 }
 
 .card-body {
@@ -78,16 +105,21 @@ body {
   display: flex;
   flex-direction: column;
   width: 300px;
-  background-color: white;
+  background-color: var(--color-white);
   border-radius: 16px;
   box-shadow: var(--shadow-sneaker);
-  margin: 20px;
+  transition: transform 0.3s ease-in-out;
 }
+
+.card-body:hover {
+  transform: scale(1.02);
+}
+
+/* ----- Card structure ----- */
 
 .container-img {
   position: relative;
 }
-
 
 .container-img img {
   object-fit: cover;
@@ -101,19 +133,18 @@ body {
 .product-content {
   padding-left: 20px;
   margin-bottom: 30px;
-
 }
 
 .product-badge {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-main);
   font-weight: 600;
   font-size: var(--text-sm);
   letter-spacing: -0.5px;
-  color: #ff602f;
+  color: var(--nike-orange);
 }
 
 .product-name {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-main);
   font-weight: 700;
   font-size: var(--text-xl);
   letter-spacing: -0.5px;
@@ -121,21 +152,21 @@ body {
 }
 
 .product-description {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-sub);
   font-weight: 400;
-  font-size: 14px;
-  color: #666;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
   margin-bottom: 15px;
 }
 
 .feature-tag {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-sub);
   font-weight: 500;
   font-size: var(--text-xs);
   padding: 4px 8px;
   border-radius: 9999px;
-  background-color: #f3f3f3;
-  color: #747474;
+  background-color: var(--gray-100);
+  color: var(--gray-500);
   vertical-align: baseline;
 }
 
@@ -147,29 +178,15 @@ body {
   padding: 0 20px 20px 20px;
 }
 
-.add-to-cart {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: var(--text-sm);
-  color: var(--color-white);
-  background-color: #ff602f;
-  border: 1px solid transparent;
-  border-radius: 99px;
-  cursor: pointer;
-  padding: 5px 10px;
-}
-
-.add-to-cart:active {
-  background: #222;
-  border-color: #222;
-  transform: translateY(1px);
-}
-
 .card-footer .price {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-main);
   font-weight: 700;
   font-size: var(--text-lg);
 }
+
+/* ----------CARDS structure----------- */
+
+/* Card Icons */
 
 .swoosh {
   position: absolute;
@@ -189,24 +206,27 @@ body {
   height: 24px;
   cursor: pointer;
   transition: all 0.2s ease;
-  color: #666;
+  color: var(--text-secondary);
   fill: none;
 }
 
 .heart:hover {
   transform: scale(1.15);
-  color: #ff602f;
+  color: var(--nike-orange);
 }
 
 .heart.liked {
-  fill: #ff602f;
-  color: #ff602f;
+  fill: var(--nike-orange);
+  color: var(--nike-orange);
 }
+
+/* ----------ICONS END----------- */
+
+/* Expandable section */
 
 .expandable-options {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   padding-left: 20px;
@@ -219,24 +239,15 @@ body {
   padding-bottom: 16px;
 }
 
-/* The button that changes */
-.select-options {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: var(--text-sm);
-  background: white;
-  color: #ff602f;
-  border: 2px solid #ff602f;
-  border-radius: 99px;
-  cursor: pointer;
-  padding: 5px 10px;
-  transition: all 0.3s ease;
+.options-divider {
+  border: none;
+  border-top: 1px solid var(--gray-200);
+  margin: 0 16px 40px 0;
 }
 
-.select-options:hover {
-  background: #ff602f;
-  color: white;
-}
+/* ----------EXPANDABLE END----------- */
+
+/* Size Selection */
 
 .size-guide {
   text-decoration: none;
@@ -256,14 +267,11 @@ body {
   align-items: center;
   margin-bottom: 8px;
   margin-top: 12px;
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  color: #666;
-    padding-right: 19px;
-
+  font-family: var(--font-sub);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  padding-right: 19px;
 }
-
-
 
 .size-grid {
   display: grid;
@@ -274,29 +282,54 @@ body {
 
 .size-box {
   padding: 8px;
-  border: 1px solid #ddd;
-  background: white;
+  border: 1px solid var(--gray-200);
+  background: var(--color-white);
   border-radius: 6px;
-  font-family: "Inter", sans-serif;
-  font-size: 14px;
+  font-family: var(--font-sub);
+  font-size: var(--text-sm);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .size-box:hover {
-  border-color: #ff602f;
+  border-color: var(--nike-orange);
 }
 
 .size-box.selected {
-  background: #ff602f;
-  color: white;
-  border-color: #ff602f;
+  background: var(--nike-orange);
+  color: var(--color-white);
+  border-color: var(--nike-orange);
 }
 
+.size-box.out-of-stock {
+  opacity: 0.4;
+  text-decoration: line-through;
+  cursor: not-allowed;
+  background: var(--gray-100);
+  color: var(--gray-400);
+  border-color: var(--gray-200);
+}
+
+.size-box.out-of-stock:hover {
+  border-color: var(--gray-200);
+  transform: none;
+}
+
+.size-box.out-of-stock:active,
+.size-box.out-of-stock.selected {
+  background: var(--gray-100);
+  color: var(--gray-400);
+  border-color: var(--gray-200);
+}
+
+/* ----------SIZES END----------- */
+
+/* Color Selection */
+
 .option-label {
-  font-family: "Inter", sans-serif;
-  font-size: 12px;
-  color: #666;
+  font-family: var(--font-sub);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -321,42 +354,155 @@ body {
 }
 
 .color-dot.active {
-  border-color: #ff602f;
+  border-color: var(--nike-orange);
 }
 
-.options-divider {
-  border: none;
-  border-top: 1px solid #e0e0e0;
-  margin: 0 16px 40px 0;
+/* ----------COLORS SELECTIOn END----------- */
+
+/* Card Buttons (RUNNING VARIANT) */
+
+.add-to-cart {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  color: var(--color-white);
+  background-color: var(--nike-orange);
+  border: 1px solid transparent;
+  border-radius: 99px;
+  cursor: pointer;
+  padding: 5px 10px;
 }
+
+.add-to-cart:active {
+  background: var(--buttonactive-dark);
+  border-color: var(--buttonactive-dark);
+  transform: translateY(1px);
+}
+
+/* =========================
+   4) UTILITIES 
+   ========================= */
+
+.btn {
+  font-family: var(--font-main);
+  font-weight: 700;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 2px solid;
+}
+
+.btn--outline {
+  background: var(--color-white);
+  color: var(--nike-orange);
+  border-color: var(--nike-orange);
+  padding: 5px 10px;
+  font-size: var(--text-sm);
+}
+
+.btn--outline:hover {
+  background: var(--nike-orange);
+  color: var(--color-white);
+}
+
+/* =========================
+   5) CARD VARIANTS
+   ========================= */
+
+/* Lifestyle */
+
+.card-body--lifestyle .price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price--sale {
+  color: var(--nike-orange);
+  font-size: var(--text-lg);
+}
+
+.price--original {
+  color: var(--gray-400);
+  text-decoration: line-through;
+  font-size: var(--text-base);
+}
+
+/* Offwhite */
+
+.card-body--offwhite .heart:hover {
+  transform: scale(1.15);
+  color: var(--offwhite-accent);
+}
+.card-body--offwhite .heart.liked {
+  fill: var(--offwhite-accent);
+  color: var(--offwhite-accent);
+}
+
+.card-body--offwhite {
+  background-color: #f2f0ef;
+}
+
+.card-body--offwhite .size-box.selected {
+  background: var(--offwhite-accent);
+  border-color: var(--offwhite-accent);
+}
+
+.card-body--offwhite .product-badge {
+  font-family: Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--offwhite-accent);
+}
+
+.offwhite-logo {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  z-index: 1;
+  width: 64px;
+  height: auto;
+}
+
+.card-body--offwhite .btn--outline {
+  color: var(--offwhite-accent);
+  border-color: var(--offwhite-accent);
+}
+
+.card-body--offwhite .btn--outline:hover {
+  background: var(--offwhite-accent);
+  color: var(--color-white);
+}
+
+.card-body--offwhite .add-to-cart {
+  background-color: var(--offwhite-accent);
+}
+
+/* =========================
+   6) PAGE LAYOUT 
+   ========================= */
 
 .portfolio-disclaimer {
-  background: #f9f9f9;
+  background: var(--gray-100);
   padding: 10px;
   text-align: center;
-  font-size: 12px;
-  color: #666;
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
   margin-bottom: 20px;
 }
 
-.size-box.out-of-stock {
-  opacity: 0.4;
-  text-decoration: line-through;
-  cursor: not-allowed;
-  background: #f5f5f5;
-  color: #999;
-  border-color: #e0e0e0;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
-.size-box.out-of-stock:hover {
-  border-color: #e0e0e0;
-  transform: none;
+.container-footer {
+  margin-top: 20px;
 }
 
-.size-box.out-of-stock:active,
-.size-box.out-of-stock.selected {
-  background: #f5f5f5;
-  color: #999;
-  border-color: #e0e0e0;
+@media (max-width: 768px) {
+  .card-collection {
+    grid-template-columns: 1fr;
+  }
 }
-

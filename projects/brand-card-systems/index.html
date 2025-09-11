@@ -14,106 +14,316 @@
   </head>
   <body>
     <main>
-      <div class="card-body">
-        <svg
-          class="heart"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
+      <div class="container">
+        <div class="card-collection">
+          <!-- Shopping Card 1 -->
+          <div class="card-body" data-product="vomero">
+            <svg
+              class="heart"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
 
-        <img src="assets/swoosh-orange.png" alt="nike-logo" class="swoosh" />
+            <img
+              src="assets/swoosh-orange.png"
+              alt="nike-logo"
+              class="swoosh"
+            />
 
-        <div class="container-img">
-          <img src="assets/vomero_plus_pink.jpeg" alt="nike vomero image" />
-        </div>
-        <div class="product-content">
-          <div class="product-badge">RUNNING</div>
-          <h2 class="product-name">Nike Vomero Plus</h2>
-          <h3 class="product-description">Women's Road Running Shoes</h3>
-          <div class="features">
-            <span class="feature-tag">React Foam</span>
-            <span class="feature-tag">Zoom Air</span>
-          </div>
-        </div>
+            <div class="container-img">
+              <img src="assets/vomero_plus_pink.jpeg" alt="nike vomero image" />
+            </div>
+            <div class="product-content">
+              <div class="product-badge">RUNNING</div>
+              <h2 class="product-name">Nike Vomero Plus</h2>
+              <h3 class="product-description">Women's Road Running Shoes</h3>
+              <div class="features">
+                <span class="feature-tag">React Foam</span>
+                <span class="feature-tag">Zoom Air</span>
+              </div>
+            </div>
 
-        <div class="expandable-options">
-          <hr class="options-divider" />
-          <div class="size-section">
-            <div class="size-header">
-              <p class="option-label">Select Size:</p>
-              <a
-                href="https://www.nike.com/size-fit/womens-footwear?_gl=1*r6vyyr*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwtrXFBhBiEiwAEKen15vpOp9VOnoYvW4OD-bjxRhNEjat81WzECnTghViyWQGQNrCsvVFVhoCzHEQAvD_BwE&gclsrc=aw.ds&gbraid=0AAAAADy86kMvBHy4RKsFEeu6rys1y2FdA"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="size-guide"
-                >Size Guide</a
-              >
+            <div class="expandable-options">
+              <hr class="options-divider" />
+              <div class="size-section">
+                <div class="size-header">
+                  <p class="option-label">Select Size:</p>
+                  <a
+                    href="https://www.nike.com/size-fit/womens-footwear?_gl=1*r6vyyr*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwtrXFBhBiEiwAEKen15vpOp9VOnoYvW4OD-bjxRhNEjat81WzECnTghViyWQGQNrCsvVFVhoCzHEQAvD_BwE&gclsrc=aw.ds&gbraid=0AAAAADy86kMvBHy4RKsFEeu6rys1y2FdA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="size-guide"
+                    >Size Guide</a
+                  >
+                </div>
+                <div class="size-grid">
+                  <button class="size-box">6</button>
+                  <button class="size-box">6.5</button>
+                  <button class="size-box">7</button>
+                  <button class="size-box">7.5</button>
+                  <button class="size-box out-of-stock">8.5</button>
+                  <button class="size-box">8.5</button>
+                  <button class="size-box">9</button>
+                  <button class="size-box out-of-stock">9.5</button>
+                </div>
+              </div>
+              <div class="color-section">
+                <p class="option-label">Color:</p>
+                <div class="color-options">
+                  <span
+                    class="color-dot active"
+                    data-color="orange"
+                    style="background: #ffb274"
+                  ></span>
+                  <span
+                    class="color-dot"
+                    data-color="white"
+                    style="background: #f2f2f2"
+                  ></span>
+                  <span
+                    class="color-dot"
+                    data-color="light-blue"
+                    style="background: #7394b3"
+                  ></span>
+                  <span
+                    class="color-dot"
+                    data-color="black"
+                    style="background: #28292d"
+                  ></span>
+                  <span
+                    class="color-dot"
+                    data-color="pink"
+                    style="background: #ff9ebe"
+                  ></span>
+                </div>
+              </div>
             </div>
-            <div class="size-grid">
-              <button class="size-box">6</button>
-              <button class="size-box">6.5</button>
-              <button class="size-box">7</button>
-              <button class="size-box">7.5</button>
-              <button class="size-box out-of-stock">8.5</button>
-              <button class="size-box">8.5</button>
-              <button class="size-box">9</button>
-              <button class="size-box out-of-stock">9.5</button>
+            <div class="card-footer">
+              <span class="price">$159</span>
+              <button class="btn btn--outline" onclick="toggleOptions(this)">
+                Select Options
+              </button>
             </div>
           </div>
-          <div class="color-section">
-            <p class="option-label">Color:</p>
-            <div class="color-options">
-              <span
-                class="color-dot active"
-                data-color="orange"
-                style="background: #ffb274"
-              ></span>
-              <span
-                class="color-dot"
-                data-color="white"
-                style="background: #f2f2f2"
-              ></span>
-              <span
-                class="color-dot"
-                data-color="light-blue"
-                style="background: #7394b3"
-              ></span>
-              <span
-                class="color-dot"
-                data-color="black"
-                style="background: #28292d"
-              ></span>
-              <span
-                class="color-dot"
-                data-color="pink"
-                style="background: #ff9ebe"
-              ></span>
+
+          <!-- Shopping Card 2 -->
+
+          <div class="card-body card-body--lifestyle" data-product="dunk">
+            <svg
+              class="heart"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <img
+              src="assets/swoosh-orange.png"
+              alt="nike-logo"
+              class="swoosh"
+            />
+
+            <div class="container-img">
+              <img src="assets/dunk_black.jpeg" alt="nike dunk image" />
+            </div>
+            <div class="product-content">
+              <div class="product-badge">LIFESTYLE</div>
+              <h2 class="product-name">Nike Dunk Low Retro</h2>
+              <h3 class="product-description">Men's Shoes</h3>
+              <div class="features">
+                <span class="feature-tag">Essentials</span>
+              </div>
+            </div>
+
+            <div class="expandable-options">
+              <hr class="options-divider" />
+              <div class="size-section">
+                <div class="size-header">
+                  <p class="option-label">Select Size:</p>
+                  <a
+                    href="https://www.nike.com/size-fit/unisex-footwear-mens-based?_gl=1*luhpgv*_up*MQ..*_gs*MQ..&gclid=Cj0KCQjw5onGBhDeARIsAFK6QJbFudxFpk6wIFdl-axTqBuqkcPQCB8K0c3j5nAV1mrsAfsjVhZHCWYaAhlDEALw_wcB&gclsrc=aw.ds&gbraid=0AAAAADy86kMcHrXmgsWYR2Bd75cOmZIyh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="size-guide"
+                    >Size Guide</a
+                  >
+                </div>
+                <div class="size-grid">
+                  <button class="size-box">6</button>
+                  <button class="size-box">6.5</button>
+                  <button class="size-box">7</button>
+                  <button class="size-box">7.5</button>
+                  <button class="size-box out-of-stock">8.5</button>
+                  <button class="size-box">8.5</button>
+                  <button class="size-box">9</button>
+                  <button class="size-box out-of-stock">9.5</button>
+                </div>
+              </div>
+              <div class="color-section">
+                <p class="option-label">Color:</p>
+                <div class="color-options">
+                  <span
+                    class="color-dot active"
+                    data-color="black"
+                    style="background: #090909"
+                  ></span>
+                  <span
+                    class="color-dot"
+                    data-color="brown"
+                    style="background: #4c3939"
+                  ></span>
+                  <span
+                    class="color-dot"
+                    data-color="purple"
+                    style="background: #964abc"
+                  ></span>
+                  <span
+                    class="color-dot"
+                    data-color="cream"
+                    style="background: #e2c8b6"
+                  ></span>
+                  <span
+                    class="color-dot"
+                    data-color="yellow"
+                    style="background: #f5d365"
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <span class="price">
+                <span class="price--sale">$97</span>
+                <span class="price--original">$130</span>
+              </span>
+              <button class="btn btn--outline" onclick="toggleOptions(this)">
+                Select Options
+              </button>
             </div>
           </div>
-        </div>
-        <div class="card-footer">
-          <span class="price">$130</span>
-          <button class="select-options" onclick="toggleOptions(this)">
-            Select Options
-          </button>
+
+          <!-- Shopping Card 3 -->
+
+          <div class="card-body card-body--offwhite" data-product="virgil">
+            <svg
+              class="heart"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+
+            <img
+              src="assets/offwhite_logo.png"
+              alt="offwhite-logo"
+              class="offwhite-logo"
+            />
+
+            <div class="container-img">
+              <img src="assets/offwhite_green.png" alt="offwhite dunks" />
+            </div>
+            <div class="product-content">
+              <div class="product-badge">"Dunk Low"</div>
+              <h2 class="product-name">Nike x Off-White</h2>
+              <h3 class="product-description">Unisex Shoes</h3>
+              <div class="features">
+                <span class="feature-tag">"AIR"</span>
+                                <span class="feature-tag">"LIMITED"</span>
+
+              </div>
+            </div>
+
+            <div class="expandable-options">
+              <hr class="options-divider" />
+              <div class="size-section">
+                <div class="size-header">
+                  <p class="option-label">Select Size:</p>
+                  <a
+                    href="https://www.nike.com/size-fit/womens-footwear?_gl=1*r6vyyr*_up*MQ..*_gs*MQ..&gclid=CjwKCAjwtrXFBhBiEiwAEKen15vpOp9VOnoYvW4OD-bjxRhNEjat81WzECnTghViyWQGQNrCsvVFVhoCzHEQAvD_BwE&gclsrc=aw.ds&gbraid=0AAAAADy86kMvBHy4RKsFEeu6rys1y2FdA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="size-guide"
+                    >Size Guide</a
+                  >
+                </div>
+                <div class="size-grid">
+                  <button class="size-box">6</button>
+                  <button class="size-box">6.5</button>
+                  <button class="size-box">7</button>
+                  <button class="size-box">7.5</button>
+                  <button class="size-box out-of-stock">8.5</button>
+                  <button class="size-box">8.5</button>
+                  <button class="size-box">9</button>
+                  <button class="size-box out-of-stock">9.5</button>
+                </div>
+              </div>
+              <div class="color-section">
+                <p class="option-label">Color:</p>
+                <div class="color-options">
+                  <span
+                    class="color-dot active"
+                    data-color="green"
+                    style="background: #076a44"
+                  ></span>
+                  <span
+                    class="color-dot"
+                    data-color="red"
+                    style="background: #a00e0e"
+                  ></span>
+                  <span
+                    class="color-dot"
+                    data-color="blue"
+                    style="background: #1a1468"
+                  ></span>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <span class="price">$130</span>
+              <button class="btn btn--outline" onclick="toggleOptions(this)">
+                Select Options
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
     <footer>
-      <div class="portfolio-disclaimer">
-        <p>⚠️ Educational Project - Not affiliated with Nike, Inc.</p>
-        <p>Created to demonstrate front-end development skills</p>
+      <div class="container-footer">
+        <div class="portfolio-disclaimer">
+          <p>⚠️ Educational Project - Not affiliated with Nike, Inc.</p>
+          <p>Created to demonstrate front-end development skills</p>
+        </div>
       </div>
     </footer>
   </body>
@@ -140,7 +350,7 @@
         button.className = "add-to-cart";
       } else {
         button.textContent = "Select Options";
-        button.className = "select-options";
+        button.className = "btn btn--outline";
       }
     }
 
@@ -172,13 +382,21 @@
 
         // change image of the shoe with the color selected
         const selectedColor = this.dataset.color;
-        const shoeImage = document.querySelector(".container-img img");
+        const card = this.closest(".card-body");
+        const productType = card.dataset.product;
+        const shoeImage = card.querySelector(".container-img img");
 
-        // CORRECTED JAVASCRIPT PATH
+        // new path - updated
+
         const basePath = "assets/";
-        shoeImage.src = `${basePath}vomero_plus_${selectedColor}.jpeg`;
+        if (productType === "vomero") {
+          shoeImage.src = `${basePath}vomero_plus_${selectedColor}.jpeg`;
+        } else if (productType === "dunk") {
+          shoeImage.src = `${basePath}dunk_${selectedColor}.jpeg`;
+        } else if (productType === "virgil") {
+          shoeImage.src = `${basePath}offwhite_${selectedColor}.png`;
+        }
       });
     });
   </script>
 </html>
-
