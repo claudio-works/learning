@@ -1,34 +1,55 @@
+# Nike Shopping Cards - Brand Design System
 
-## Brand Card Systems
+![Shopping Cards Concept Cover](./Shopping_cards_concept.png)
 
-Exploring how brand identity shapes product card design through Nike variations and style comparisons.
+A responsive e-commerce card system showcasing how Nike adapts its design language across different market segments - from performance running to lifestyle streetwear to luxury collaborations.
 
-## Project Goal
-After practicing basic product cards, I want to dive deeper into how the same product can look completely different depending on brand presentation. This project will focus on creating multiple Nike shoe cards for different audiences, plus exploring contrasting design approaches.
+### Here’s a quick look at the interactions in action ↓
+![Demo of card interactions](./gif.gif) 
 
-## Plan
-Nike Variations to Build:
+## Project Overview
 
- - Running theme - Clean, performance-focused
- - Lifestyle theme - Trendy, fashion-forward
- - Limited edition theme - Premium, exclusive feel
+This project explores how brand identity shapes UI design by creating three distinct Nike product cards, each targeting different audiences while maintaining brand cohesion.
 
-## What I'm Learning
+### Live Demo: [View Project](https://claudio-css.netlify.app/projects/brand-card-systems/)
 
-- Brand consistency vs. audience targeting
-- How typography affects perception
-- Color psychology in different contexts
-- Strategic design thinking
-=======
-# CSS Practice
+## Built With
 
-## Projects
-- **Pod Landing Page** - Flexbox, positioning, overlays
-- **Pizzeria Concept** - Layout experiments
+- **HTML5**
+- **CSS3** - Custom properties, Grid, Flexbox
+- **JavaScript** - Dynamic color switching, size selection, expandable cards
 
-## Practice Exercises
-- Product cards
-- Navigation bars
-- Layout patterns
+## Features
 
-Learning CSS by building stuff.
+- **Dynamic Color Selection** - Each shoe variant updates with product-specific colorways
+- **Size Availability** - Real-time stock status with disabled states
+- **Expandable Options** - Product option/styles
+- **Responsive Design** - Mobile grid layout approach
+- **Interactive Elements** - Hover states, active selections
+
+## Design Variations
+
+### 1. Performance Running
+Clean, technical design focusing on product specifications and performance features.
+
+### 2. Lifestyle Streetwear  
+Simplified aesthetic emphasizing style over specs.
+
+### 3. Off-White Collaboration
+Here’s how I imagined a Nike x Off-White product card might look in a real shop setting.
+
+## Key Learnings
+
+- **CSS Architecture** - Implemented scalable CSS with custom properties and utility classes
+- **Design Systems** - Understanding how subtle changes communicate different brand messages
+- **Code Organization** - Refactored from 400+ lines to organized, maintainable components
+
+## Future Enhancements
+
+- [ ] Dark mode toggle
+- [ ] Cart functionality
+- [ ] Additional brand comparisons (Adidas, New Balance)
+- [ ] Wishlist system
+
+---
+
